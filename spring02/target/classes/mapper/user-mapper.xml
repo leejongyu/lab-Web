@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spring02.mapper.UserMapper">
+
+
+    <select id="selectAllUser" resultType="com.example.spring02.domain.Userlist">
+        select * from USERLIST order by ID desc
+    </select>
+
+    <insert id="insertUser">
+    insert into USERLIST (NAME, PASSWORD, EMAIL)
+    values (#{name}, #{password}, #{email})
+    </insert>
+
+    <select id="selectUser" resultType="com.example.spring02.domain.Userlist">
+        select * from USERLIST where id = #{id}    
+    </select>
+    
+    <delete id="deleteUser">
+        delete from USERLIST where id = #{id}
+    </delete>
+
+    <update id="updateUser">
+        update USERLIST 
+        set PASSWORD = #{password}, EMAIL = #{email}, POINTS = #{points}
+        where id = #{id} 
+    </update>
+    
+    <select id="signCheck" resultType="com.example.spring02.domain.Userlist">
+        select * from USERLIST 
+        where name = #{name} and password = #{password}
+    </select>
+
+</mapper>
