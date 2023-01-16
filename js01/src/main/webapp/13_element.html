@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트</title>
+
+
+<style>
+.main-panel {
+    font-size: 200%; /*부모 엘리먼트의 기본 폰트 크기의 200% */
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sub-panel {
+    font-size: 50%; /* 위쪽에서 바꾼 폰트 크기의 50% */
+    font-weight: normal;
+    background-color: white;
+    color: black;
+    text-align: left;
+    border: 1px solid gray;
+    display:none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+    display: inline-block;
+    width: 100px;
+}
+</style>
+</head>
+<body>
+
+    <h1>자바 스크립트 찾기</h1>
+
+    <button id="btn-hide">HIDE</button>
+    <button id="btn-show">SHOW</button>
+    <button id="btn-dspn">DISPLAY NONE</button>
+    <button id="btn-dspb">DISPLAY BLOCK</button>
+
+
+    <hr />
+
+    <div class="main-panel">
+        Click!
+        <div class="sub-panel">
+            <ul>
+                <li>페이스북</li>
+                <li>인스타그램</li>
+                <li>트위터</li>
+                <li>유튜브</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+					const h1 = document.querySelector('h1'); // 태그 이름으로 찾기 
+					const btnHide = document.querySelector('#btn-hide'); // ID 이름으로 찾기
+
+					btnHide.addEventListener('click', function() {
+
+						h1.style.visibility = 'hidden';
+
+					});
+
+					const btnShow = document.querySelector('#btn-show'); // ID 이름으로 찾기
+
+					btnShow.addEventListener('click', function() {
+
+						h1.style.visibility = 'visible';
+
+					});
+
+					const btnDSPN = document.querySelector('#btn-dspn'); // ID 이름으로 찾기
+
+					btnDSPN.addEventListener('click', function() {
+
+						h1.style.display = 'none';
+
+					});
+
+					const btnDSPB = document.querySelector('#btn-dspb'); // ID 이름으로 찾기
+
+					btnDSPB.addEventListener('click', function() {
+
+						h1.style.display = 'block';
+
+					});
+					
+					
+					const mainPanel = document.querySelector('div.main-panel');
+					mainPanel.addEventListener('click', function() {
+						const subPanel = document.querySelector('div.sub-panel');
+						let display = subPanel.style.display;
+						if(display == 'none' || display == ''){
+							
+							subPanel.style.display = 'block'
+							
+						} else{
+							
+							subPanel.style.display = 'none'
+							
+						}
+						
+				
+
+                    });
+					
+				</script>
+
+</body>
+</html>

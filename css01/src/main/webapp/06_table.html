@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+
+<style>
+    #member, #member th, #member td {
+        border : 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    #member > thead > tr > th {
+    background-color: gray;
+    }
+    
+    #post{
+        width : 100%; /* width x% : 브라우저에서 사용 가능한 크기의 x% 만큼 사용  */
+        border-collapse: collapse;
+    }
+    
+    #post th{
+        background-color: mediumseagreen;
+    }
+    
+    #post th, #post td {
+        border-bottom: 1px solid gray;
+        padding : 4px;
+    }
+    
+    #post > tbody > tr:nth-child(even) {
+        background-color: lightgray;
+    }
+    
+    #post > tbody > tr:hover {
+        background-color: tomato;
+}
+    
+</style>
+
+</head>
+<body>
+
+    <h1> Table </h1>
+    
+    <table id = "member">
+        <caption> 회원 정보 </caption>
+        <thead>
+            <tr>
+                <th> 아이디 </th>
+                <th> 비밀번호 </th>
+                <th> 이메일 </th>
+            </tr>
+        
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td> 아이디1 </td>
+                <td> 비밀번호1 </td>
+                <td> 이메일1 </td>
+            </tr>
+            <tr>
+                <td> 아이디2 </td>
+                <td> 비밀번호2 </td>
+                <td> 이메일2 </td>
+            </tr>
+            <tr>
+                <td> 아이디3 </td>
+                <td> 비밀번호3 </td>
+                <td> 이메일3 </td>
+            </tr>
+        
+        </tbody>
+    </table>
+
+
+    <hr/>
+    
+    
+    <table id ="post">
+        <caption> 자유 게시판 </caption>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성시간</th>
+           </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>CSS</td>
+                <td>ADMIN</td>
+                <td>2022-10-26</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HTML</td>
+                <td>ADMIN2</td>
+                <td>2022-10-27</td>
+            </tr>            
+            <tr>
+                <td>3</td>
+                <td>JSP</td>
+                <td>ADMIN3</td>
+                <td>2022-10-22</td>
+            </tr>       
+            <tr>
+                <td>4</td>
+                <td>JSP?</td>
+                <td>ADMIN3?</td>
+                <td>2022-10-22</td>
+            </tr>      
+            <tr>
+                <td>5</td>
+                <td>JSP?!</td>
+                <td>ADMIN3?!</td>
+                <td>2022-10-22</td>
+            </tr>             
+
+        </tbody>
+        
+    </table>
+    
+    
+</body>
+</html>

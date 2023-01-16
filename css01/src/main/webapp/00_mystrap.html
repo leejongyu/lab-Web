@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap</title>
+
+
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous">
+
+<style>
+
+body {
+    background-color: teal;
+}
+
+#theme {
+    text-align: center;
+    background-color: black;
+    color: lightgray;
+}
+
+.accordion-button {
+    color: white;
+    background-color: black;
+}
+
+#headingOne .accordion-button:hover {
+    color: white;
+    background-color: red;
+}
+
+.doll-play {
+    color: white;
+    background-color: red;
+}
+
+.doll-play:hover {
+    color: red;
+    background-color: darkgray;
+}
+
+#headingTwo .accordion-button:hover {
+    color: blue;
+    background-color: white;
+}
+
+.dream-play {
+    color: white;
+    background-color: blue;
+}
+
+.dream-play:hover {
+    color: blue;
+    background-color: darkgray;
+}
+
+#headingThree .accordion-button:hover {
+    color: black;
+    background-color: gray;
+}
+
+.kill-play {
+    color: white;
+    background-color: black;
+}
+
+.kill-play:hover {
+    color: black;
+    background-color: gray;
+}
+
+#doll {
+    color: red;
+}
+
+#dream {
+    color: blue;
+}
+
+table {
+    background-color: lightgray;
+}
+
+table td, tr {
+    border: 2px solid darkgray;
+    text-align: center;
+    width: 30%;
+}
+
+#ing {
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <header class="row">
+
+            <div class="alert alert-danger" role="alert">작업중인
+                홈페이지입니다. 아직 게임 이용이 불가능합니다.</div>
+            <h1 id="theme">Theme</h1>
+
+            <div class="accordion" id="accordionExample">
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed"
+                            type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne">STORY 1
+                            : 인형괴담</button>
+                    </h2>
+                    <div id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            길을 걷다가 우연히 발견한 <strong id="doll">인형</strong>.
+                            그 저주받은 <strong id="doll">인형</strong>으로 인해
+                            발생하게 되는 이야기.
+                            <button type="button" class="btn doll-play">Play
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed"
+                            type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">STORY 2
+                            : 꿈</button>
+                    </h2>
+                    <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            언제부터인가 같은 <strong id="dream">꿈</strong>을
+                            반복해서 꾸는 나. <br /> 그러던 어느 날, 나의 일상이 내가 항상 꾸던
+                            <strong id="dream">꿈</strong>이 되어버렸다.
+                            <button type="button"
+                                class="btn dream-play ">Play</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed"
+                            type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+                            STORY 3 : 살인자의 기억</button>
+                    </h2>
+                    <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            나는 <strong id="kill">살인</strong>자다. <br />
+                            나의 <strong id="kill">살인</strong>은 항상 완벽했고 그
+                            누구도 나를 찾아내지 못했다. <br /> 그런데 어느날 내가 죽인적 없는
+                            시체들에게서 나온 나의 흔적들.. <br /> 도대체 어떻게 된걸까? 나의
+                            기억을 되살려 진실을 파헤쳐야한다.
+                            <button type="button"
+                                class="btn kill-play left ">Play
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <br />
+        <main class="row content"></main>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>테마</th>
+                    <th>금액</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>인형괴담 (혼자하기 전용)</td>
+                    <td>3.500</td>
+                </tr>
+                <tr>
+                    <td>꿈</td>
+                    <td>3.500</td>
+                </tr>
+                <tr>
+                    <td>살인자의 기억</td>
+                    <td>4.000</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <footer class="row footer">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle position-fixed bottom-0 end-0"
+                    type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">입금 계좌</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">카카오 :
+                            1234-56-7890123 </a></li>
+                    <li><a class="dropdown-item">신한은행 :
+                            1234-56-7890123 </a></li>
+                    <li><a class="dropdown-item">국민은행 :
+                            1234-56-7890123 </a></li>
+                </ul>
+            </div>
+                            <h2 id = "ing">작업중인 홈페이지입니다.</h2>
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-danger" role="status">
+              
+                    <span></span>
+                </div>
+            </div>
+  
+
+        </footer>
+
+    </div>
+
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous">
+					
+				</script>
+
+
+</body>
+</html>

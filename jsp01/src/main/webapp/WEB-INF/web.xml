@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    id="WebApp_ID" version="4.0">
+    <display-name>jsp01</display-name>
+
+    <!-- Servlet, Servlet mapping 설정 -->
+    <servlet>
+        <servlet-name>secondServlet</servlet-name> <!-- servlet mapping에서 호출할 이름 -->
+        <servlet-class>edu.web.jsp01.SecondServlet</servlet-class> <!-- servlet 주소 -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>secondServlet</servlet-name>  <!-- 호출할 servlet -->
+        <url-pattern>/ex2</url-pattern> <!-- 요청 -->
+    </servlet-mapping>
+    
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

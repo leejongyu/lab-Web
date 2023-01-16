@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자-스</title>
+
+<style>
+div {
+    border: 1px solid gray;
+    margin: 8px;
+    padding: 8px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 8px;
+    padding: 8px;
+}
+</style>
+
+</head>
+<body>
+
+    <h1>Heading 만들기</h1>
+
+    <button onclick="makeHeadings()">헤드바튼</button>
+    <button onclick="deleteHeadings()">헤드클리어</button>
+
+    <div id="result"></div>
+
+    <h2>Table body 만들기</h2>
+
+    <input type="text" placeholder="제목을 입력하세요" id="title" />
+    <input type="text" placeholder="아이디를 입력하세요" id="name" />
+    <input type="number" placeholder="숫자를 입력하세요" id="tblnum" />
+
+
+    <button onclick="makeTabel()">테이블바튼</button>
+    <button onclick="makeTabel2()">테이블반복바튼</button>
+    <button onclick="deleteTabel()">테이블클리어</button>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody id="tblbody">
+
+        </tbody>
+    </table>
+
+
+
+
+    <script>
+					const result = document.getElementById('result');
+
+					function makeHeadings() {
+						result.innerHTML += '<div>뭔가 계속 만들어 지는 중</div>';
+					}
+
+					function deleteHeadings() {
+						result.innerHTML = '';
+					}
+
+					const tblbody = document.getElementById('tblbody');
+
+					const title = document.getElementById('title');
+					const name = document.getElementById('name');
+
+					let number = 1;
+
+					function makeTabel() {
+						tblbody.innerHTML += `<tr><td>${number}</td><td>${title.value}</td><td>${name.value}</td></tr>`;
+
+						number++;
+					}
+
+					const num = document.getElementById('tblnum');
+
+					function makeTabel2() {
+
+						for (let n = 1; n <= num.value; n++) {
+							tblbody.innerHTML += `<tr><td>${number}</td><td>${title.value}</td><td>${name.value}</td></tr>`;
+							number++;
+						}
+
+					}
+
+					function deleteTabel() {
+						tblbody.innerHTML = '';
+
+						number = 1;
+					}
+				</script>
+
+</body>
+</html>

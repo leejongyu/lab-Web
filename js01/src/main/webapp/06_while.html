@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 자바 스크립트 </title>
+</head>
+<body>
+
+    <h1>자바 스크립트 while</h1>
+    <div id = "result"></div>
+    
+    <script>
+    
+    // id = "result" element에 구구단을 출력
+    const result = document.getElementById('result');
+    
+
+    // (1) 구구단 3단
+    let text = '';
+    let dan = 3;
+    let num = 1;
+    
+    while(true){
+    	text += dan + ' x ' + num + ' = ' + dan * num + '<br/>';
+    	num++;
+    	if (num == 10) {
+            break;
+        }
+    }text += '<hr/>';
+    result.innerHTML = text;
+    
+    // (2) 구구단 2단 ~ 9단. n x n 까지만 출력.
+    dan = 2;
+
+    text = '';
+
+    while(dan < 10){
+        num = 1;
+    	while(true) {
+    		text += `${dan} x ${num} = ${dan * num} <br/>`
+    		if (num == dan){
+    			break;
+    		}
+    		    num++;    	
+    	}
+        text += '<hr/>';
+        
+    	dan++;
+    }
+    result.innerHTML += text;
+    
+    
+    // do-while
+    	
+    text = '';
+    let n = 10;
+    
+    do {
+    	text += `JavaScript ${n} <br/>`;
+    	n++;
+    } while (n <10) {
+    result.innerHTML += text;
+    }
+    
+    </script>
+    
+</body>
+</html>
