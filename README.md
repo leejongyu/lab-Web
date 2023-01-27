@@ -1,2 +1,2 @@
 # lab-Web
-web
+web 수업 내용
